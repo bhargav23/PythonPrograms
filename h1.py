@@ -1,3 +1,8 @@
+!pip install selenium
+!pip install BeautifulSoup
+!pip install pandas
+!pip install numpy
+
 from selenium import webdriver
 from bs4 import BeautifulSoup
 import pandas as pd 
