@@ -32,19 +32,21 @@ def printScore(score):
 
 name1 = []
 score1 = []
-df1 = pd.DataFrame({'Name':name1,'Score':score1})
 
-i =0
+
+i = 1
 while(True):
     driver1 = webdriver.Chrome()
     
     driver1.get('https://www.hackerrank.com/contests/hexprac108/leaderboard/'+str(i))  
     content1 =driver1.page_source
     soup = BeautifulSoup(content1,features="html.parser")
-    printName(name1)
-    printScore(score1)
+    name1.append(printName(name1))
+    score1.append(printScore(score1))
     i=i+1
-    if(i==10):
+    if(i==27):
         break
+    
 
+df1 = pd.DataFrame({'Name':name1,'Score':score1})
 df1.to_csv('Excel_Sheet.csv',index=False,encoding="utf-8")
