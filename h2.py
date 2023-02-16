@@ -1,11 +1,11 @@
-"""
-#sudo apt install chromium-chromedriver
+
+sudo apt install chromium-chromedriver
 #sudo apt install python-pip
-#!pip3 install selenium
-#!pip3 install BeautifulSoup
-#!pip3 install pandas
-#!pip3 install numpy
-"""
+!pip install selenium
+!pip install BeautifulSoup
+!pip install pandas
+!pip install numpy
+
 from selenium import webdriver
 from bs4 import BeautifulSoup
 import pandas as pd 
